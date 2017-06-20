@@ -64,7 +64,7 @@ gulp.task('html', ['inject', 'partials'], function() {
     .pipe(assets = $.useref.assets())
     .pipe($.rev())
     .pipe(jsFilter)
-    .pipe($.replace('localhost:3000', 'jsonapi-robot-wars.herokuapp.com'))
+    .pipe($.replace('localhost:3000', '192.168.0.101:3000'))
     .pipe($.sourcemaps.init())
     .pipe($.ngAnnotate())
     .pipe($.uglify({ preserveComments: $.uglifySaveLicense })).on('error', conf.errorHandler('Uglify'))
